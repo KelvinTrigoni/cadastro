@@ -4,7 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const port = 9090;
+  const port = process.env.PORT || 9090;
   const globalPrefix = 'cadastro';
 
   const app = await NestFactory.create(AppModule);
